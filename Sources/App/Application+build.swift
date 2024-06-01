@@ -29,6 +29,11 @@ public func buildApplication(_ arguments: some AppArguments) async throws -> som
     router.middlewares.add(FileMiddleware())
     PagesController(mustacheLibrary: library).addRoutes(to: router)
     
+    // Add health route
+    router.get("/health") { _,_ -> HTTPResponse.Status in
+        return .ok
+    }
+    
     let app = Application(
         router: router,
         configuration: .init(
