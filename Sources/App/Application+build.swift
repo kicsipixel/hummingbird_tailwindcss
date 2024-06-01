@@ -29,8 +29,6 @@ public func buildApplication(_ arguments: some AppArguments) async throws -> som
     router.middlewares.add(FileMiddleware())
     PagesController(mustacheLibrary: library).addRoutes(to: router)
     
-
-    
     let app = Application(
         router: router,
         configuration: .init(
