@@ -16,12 +16,14 @@ func tailwind(_ app: some ApplicationProtocol) async throws {
     )
 }
 
+///
+/// This is not supposed to be here but to avoid confusions, I left it here...
+///
 extension ApplicationProtocol {
     var directory: DefineWorkingDirectory {
         DefineWorkingDirectory.detect()
     }
 }
-
 
 struct DefineWorkingDirectory {
     var workingDirectory: String
