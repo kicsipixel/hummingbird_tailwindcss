@@ -558,8 +558,8 @@ video {
   height: 100vh;
 }
 
-.w-32 {
-  width: 8rem;
+.w-64 {
+  width: 16rem;
 }
 
 .items-center {
